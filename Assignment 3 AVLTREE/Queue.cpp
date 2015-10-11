@@ -27,13 +27,14 @@ Queue::Queue()
 
 Queue::~Queue()
 {
-    while (front != NULL)
-        Pop() ;
+    while (!isEmpty()) {
+        Pop();
+    }
 }
 
 void Queue::Add(Board& pushBoard)
 {
-    if (IsEmpty())
+    if (isEmpty())
     {
         front = rear = new Node(pushBoard) ;
         
@@ -50,7 +51,7 @@ void Queue::Add(Board& pushBoard)
 
 Board Queue::Pop ()
 {
-    if (IsEmpty())
+    if (isEmpty())
         throw QueueEmptyException() ;
     
     sizeOfQueue-- ;
@@ -63,7 +64,7 @@ Board Queue::Pop ()
     return popBoard ;
 }
 
-bool Queue::IsEmpty()
+bool Queue::isEmpty()
 {
     if (sizeOfQueue == 0)
         return true ;
@@ -71,12 +72,25 @@ bool Queue::IsEmpty()
         return false ;
 }
 
-bool Queue::IsFull()
-{	
-    return false ;
+void Queue::clear(){
+    if(front == NULL){
+        cout << "nothing to clear..."<< endl;
+        return;
+    }
+    Node *n = front;
+    while(n!=NULL){
+        //		cout << n->value << endl;
+        Node*temp=n;
+        delete(n);
+        n = temp->next;
+    }
+    front = NULL;
+    rear = NULL;
+    delete(n);
+    sizeOfQueue=0;
+    addedToQueue=0;
+    removedFromQueue=0;
+    
+    //	cout << "clearing doublyLinkedList..." << endl;
 }
 
-int Queue::Size()
-{	
-    return sizeOfQueue ;
-}

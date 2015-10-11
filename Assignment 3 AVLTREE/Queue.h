@@ -27,19 +27,18 @@ private:
     int sizeOfQueue;
     int addedToQueue = 0;
     int removedFromQueue = 0;
+    
 public:
     Queue() ;
     ~Queue() ;
-    
     void Add(Board& pushBoard) ;
     Board Pop() ;
-    bool IsEmpty() ;
-    bool IsFull() ;
-    int Size() ;
+    bool isEmpty() ;
+    void clear();
     class QueueEmptyException {};
     int AddedToQueue(){return addedToQueue;}
-    int RemovedQueue(){return removedFromQueue;}
-   // void numberOfMoves(){cout <<
+    int RemovedFromQueue(){return removedFromQueue;}
+    int Size(){return sizeOfQueue;}
 };
 
 

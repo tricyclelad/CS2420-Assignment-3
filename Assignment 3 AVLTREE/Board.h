@@ -23,7 +23,10 @@ public:
     string toString() const;  //return a string which represents the contents of the board
 	
     bool operator==(Board &b);   //Return true if two boards are equal
-	
+    
+    bool operator!=(Board &b);   //Return true if two boards are equal
+    
+    
     int blankRow;   // Row location of blank
 	int blankCol;   // Column location of blank
 	
@@ -39,8 +42,12 @@ public:
     void jumble(int ct);  //Do jumble moves to alter board
 	
     char makeMove(char m, char lastMove);  //Makes move indicated by m, returns character name of move if done, will not undo previous lastMove
-    void increaseMoves(){numberOfMoves++;}
     
-    int numberOfMoves = 0;
+    bool won();
+    int boardNumber;
+    int parent;
+    char history;
+    
+    
 };
 #endif

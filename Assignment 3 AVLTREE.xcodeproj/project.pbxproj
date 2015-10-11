@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		400119EB1BC9C7640042F132 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 400119EA1BC9C7640042F132 /* main.cpp */; };
 		400119FA1BC9C9250042F132 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 400119F21BC9C9250042F132 /* Board.cpp */; settings = {ASSET_TAGS = (); }; };
-		400119FB1BC9C9250042F132 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 400119F41BC9C9250042F132 /* Game.cpp */; settings = {ASSET_TAGS = (); }; };
 		400119FC1BC9C9250042F132 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 400119F61BC9C9250042F132 /* Queue.cpp */; settings = {ASSET_TAGS = (); }; };
 		400119FD1BC9C9250042F132 /* SliderProject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 400119F91BC9C9250042F132 /* SliderProject.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -28,11 +26,9 @@
 
 /* Begin PBXFileReference section */
 		400119E71BC9C7640042F132 /* Assignment 3 AVLTREE */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Assignment 3 AVLTREE"; sourceTree = BUILT_PRODUCTS_DIR; };
-		400119EA1BC9C7640042F132 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		400119F11BC9C8B50042F132 /* avlTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avlTree.h; sourceTree = "<group>"; };
 		400119F21BC9C9250042F132 /* Board.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
 		400119F31BC9C9250042F132 /* Board.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Board.h; sourceTree = "<group>"; };
-		400119F41BC9C9250042F132 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		400119F51BC9C9250042F132 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		400119F61BC9C9250042F132 /* Queue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Queue.cpp; sourceTree = "<group>"; };
 		400119F71BC9C9250042F132 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
@@ -69,11 +65,9 @@
 		400119E91BC9C7640042F132 /* Assignment 3 AVLTREE */ = {
 			isa = PBXGroup;
 			children = (
-				400119EA1BC9C7640042F132 /* main.cpp */,
 				400119F11BC9C8B50042F132 /* avlTree.h */,
 				400119F21BC9C9250042F132 /* Board.cpp */,
 				400119F31BC9C9250042F132 /* Board.h */,
-				400119F41BC9C9250042F132 /* Game.cpp */,
 				400119F51BC9C9250042F132 /* Game.h */,
 				400119F61BC9C9250042F132 /* Queue.cpp */,
 				400119F71BC9C9250042F132 /* Queue.h */,
@@ -138,9 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				400119FB1BC9C9250042F132 /* Game.cpp in Sources */,
 				400119FA1BC9C9250042F132 /* Board.cpp in Sources */,
-				400119EB1BC9C7640042F132 /* main.cpp in Sources */,
 				400119FD1BC9C9250042F132 /* SliderProject.cpp in Sources */,
 				400119FC1BC9C9250042F132 /* Queue.cpp in Sources */,
 			);

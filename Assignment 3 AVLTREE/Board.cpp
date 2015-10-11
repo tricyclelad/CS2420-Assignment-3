@@ -26,6 +26,14 @@ bool Board::operator==(Board &b) {
 	return true;
 }
 
+bool Board::operator!=(Board &b) {
+    
+    for (int i=0; i < SIZE; i++)
+        for (int j = 0; j < SIZE; j++)
+            if (board[i][j] != b.board[i][j]) return true;
+    return false;
+}
+
 //Create a board by performing legal moves on a board
 //jumbleCt indicates the number of moves that may be required
 //if jumbleCt ==0, return the winning board
@@ -61,7 +69,9 @@ Board::Board(const Board & b) {
 			board[i][j] = b.board[i][j];
 	blankRow = b.blankRow;
 	blankCol = b.blankCol;
-    this->numberOfMoves = b.numberOfMoves;
+    this->history = b.history;
+    this->boardNumber = b.boardNumber;
+    this->parent = b.parent;
 }
 
 
@@ -128,19 +138,20 @@ char Board::makeMove(char m, char lastmove)
 	return m;
 }
 
-void Board::showMe(string moves){
- // cout << this->toString();
-    char lastMove = ' ';
-    char thisMove = ' ';
-    
-    for (int i = 0; i < moves.size(); i++)
-    {
-        thisMove = moves[i];
-        thisMove = makeMove(thisMove, lastMove);
-        if (thisMove == ' ') 
-            continue;
-        cout << thisMove << "==>" << '\n';
-        cout << this->toString();
-        lastMove=thisMove;
+
+bool Board::won(){
+    int col = SIZE;
+    for(int i = 0; i < SIZE;i++){
+        if(i == SIZE-1){
+            col = SIZE-1;
+        }else{
+            col = SIZE;
+        }
+        for(int j = 0;j<col;j++){
+            if(board[i][j] != (SIZE*i+j+1)){
+                return false;
+            }
+        }
     }
+    return true;
 }
