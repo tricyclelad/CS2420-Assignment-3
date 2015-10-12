@@ -13,6 +13,8 @@
 #include <iostream>
 #include <assert.h>
 #include <sstream>
+#include <iomanip>
+
 using namespace std;
 
 // AvlTree class
@@ -86,7 +88,7 @@ public:
      */
     const Comparable & findMin( ) const
     {
-        assert(! isEmpty( ) ):
+        assert(! isEmpty( ) );
         return findMin( root )->element;
     }
     
@@ -96,7 +98,7 @@ public:
      */
     const Comparable & findMax( ) const
     {
-        assert( !isEmpty( ) ):
+        assert( !isEmpty( ) );
         return findMax( root )->element;
     }
     
@@ -162,7 +164,7 @@ public:
         remove( x, root );
     }
     
-private:
+public:
     struct AvlNode
     {
         Comparable element;
@@ -179,7 +181,7 @@ private:
     
     AvlNode *root;
     
-    
+private:
     /**
      * Internal method to insert into a subtree.
      * x is the item to insert.
@@ -429,6 +431,24 @@ private:
     {
         rotateWithLeftChild( k1->right );
         rotateWithRightChild( k1 );
+    }
+    public:
+    void toString(AvlNode* t, int indent=0)
+    {
+        if(t != NULL) {
+            if(t->right) {
+                toString(t->right, indent+4);
+            }
+            if (indent) {
+                cout << setw(indent) << ' ';
+            }
+            if (t->right) cout<<" /\n" << setw(indent) << ' ';
+            cout<< t->element << "\n ";
+            if(t->left) {
+                cout << setw(indent) << ' ' <<" \\\n";
+                toString(t->left, indent+4);
+            }
+        }
     }
 };
 
