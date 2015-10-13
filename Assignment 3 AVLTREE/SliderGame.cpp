@@ -1,9 +1,15 @@
+////
+////  SliderGame.cpp
+////  Assignment 3 AVLTREE
+////
+////  Created by Camron Blake Martinez on 10/12/15.
+////  Copyright © 2015 Camron Blake Martinez. All rights reserved.
+////
 //
-//  SliderGame.cpp
-//  Assignment 3 AVLTREE
+//#include "SliderGame.h"
 //
-//  Created by Camron Blake Martinez on 10/12/15.
-//  Copyright © 2015 Camron Blake Martinez. All rights reserved.
+//    
 //
-
-#include "SliderGame.h"
+//    
+//    
+//

@@ -6,9 +6,19 @@
 //  Copyright © 2015 Camron Blake Martinez. All rights reserved.
 //
 
-#ifndef SliderGame_h
-#define SliderGame_h
+//#ifndef SliderGame_h
+//#define SliderGame_h
+//
+//#include <stdio.h>
+//#include <iostream>
+//#include "BruteForceSolve.h"
+//#include "aStarSolve.h"
 
-#include <stdio.h>
-
-#endif /* SliderGame_h */
+//class SliderGame
+//{
+//
+//public:
+//private:
+//    
+//};
+//#endif /* SliderGame_h */

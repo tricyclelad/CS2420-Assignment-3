@@ -1,13 +1,13 @@
 //
-//  Game.h
+//  BruteForceSolve.h
 //  Slider Puzzle
 //
 //  Created by Camron Blake Martinez on 9/14/15.
 //  Copyright (c) 2015 Camron Blake Martinez. All rights reserved.
 //
 
-#ifndef GAME_H
-#define GAME_H
+#ifndef BruteForceSolve_H
+#define BruteForceSolve_H
 #include "Queue.h"
 #include "Board.h"
 #include <string>
@@ -15,7 +15,7 @@
 #include <map>
 #include <stack>
 
-class Game {
+class BruteForceSolve {
 public:
     Board begin;
     Board U;
@@ -23,7 +23,7 @@ public:
     Board L;
     Board R;
     Queue Q;
-    Game(){
+    BruteForceSolve(){
         ;
     }
     void playGiven(string name, int array[]){
@@ -139,4 +139,4 @@ public:
     }
 };
 
-#endif /* defined(GAME_H) */
+#endif /* defined(BruteForceSolve_H) */
