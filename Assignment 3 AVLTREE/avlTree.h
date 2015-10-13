@@ -102,6 +102,14 @@ public:
         return findMax( root )->element;
     }
     
+    const Comparable removeMin( )
+    {
+        assert(! isEmpty( ) );
+        
+        Comparable result;
+        removeMin(root, result);
+        return result;
+    }
     /**
      * Returns true if x is found in the tree.
      */
@@ -296,7 +304,29 @@ private:
         return t;
     }
     
+    void removeMin( AvlNode *&t, Comparable & result )
+    {
+        if (t != nullptr)
+        {
+            
+            if (t->left!= nullptr)
+            {
+            removeMin(t->left, result);
+            }
+            else
+            {
+            result = t->element;
+            AvlNode *oldNode = t;
+            t = ( t->left != nullptr ) ? t->left : t->right;
+            delete oldNode;
+            }
+            balance(t);
+            
+        }
     
+        
+    }
+
     /**
      * Internal method to test if an item is in a subtree.
      * x is item to search for.
@@ -432,12 +462,21 @@ private:
         rotateWithLeftChild( k1->right );
         rotateWithRightChild( k1 );
     }
-    public:
+public:
+    void toString()
+    {
+        assert(! isEmpty( ) );
+        toString(root);
+    }
+private:
+    //This prints the tree HORIZONTALLY, so that the leftmost
+    //value is the root and then the next leftmost values
+    //are its children if any
     void toString(AvlNode* t, int indent=0)
     {
         if(t != NULL) {
             if(t->right) {
-                toString(t->right, indent+4);
+                toString(t->right, indent+3);
             }
             if (indent) {
                 cout << setw(indent) << ' ';
