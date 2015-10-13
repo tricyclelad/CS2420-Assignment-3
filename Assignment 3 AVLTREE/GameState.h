@@ -21,6 +21,18 @@ public:
     int getPriority() const{return (priority);}
     char getHistory() const{return history;}
     bool operator==(GameState &gs);
+    friend bool operator <(const GameState& gs1, const GameState& gs2) {
+        return gs1.getPriority() < gs2.getPriority();
+    }
+    
+    friend bool operator >(const GameState& gs1, const GameState& gs2) {
+        return gs1.getPriority() > gs2.getPriority();
+    }
+    
+    friend ostream&  operator<<(ostream& ss, const GameState& gs) {
+        ss << gs.toString() << endl;
+        return ss;
+    }
     
     GameState();
     ~GameState();
@@ -35,15 +47,7 @@ private:
     char history = ' ';//string of moves to currentBoard
 };
 
-bool operator >(const GameState& gs1, const GameState& gs2) {
-    return gs1.getPriority() > gs2.getPriority();
-}
-bool operator <(const GameState& gs1, const GameState& gs2) {
-    return gs1.getPriority() < gs2.getPriority();
-}
-ostream&  operator<<(ostream& ss, const GameState& gs) {
-    ss << gs.toString() << endl;
-    return ss;
-}
+
+
 
 #endif /* GameState_h */
