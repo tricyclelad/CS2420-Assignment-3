@@ -12,6 +12,7 @@ using namespace std;
 const int SIZE = 3;       // Dimension of board
 int main()
 {
+
 //    AvlTree<int> *mytree = new AvlTree<int>();
 //    cout << "Dear Grader, my toString function prints the tree horizontally... Tilt your head a little" << endl;
 //    cout << "Add: 1 3 5 7 9 11 2 4 8  (now print tree)" << endl;
@@ -74,12 +75,13 @@ int main()
 //    cout << fish.toString() << endl;
 //    
 //    GameState num1(fish);
-//    
+//
+    
 //    cout << num1.getEstimatedCost();
 //    
 //    cout << num1.toString();
    // ----------------------------------
-    
+    //
 //    srand((int)time(NULL));
 //    bool playAgain = true;
 //    char response;
@@ -115,14 +117,14 @@ int main()
 //        g.playRandom("Random Board", JUMBLECT);
 //        cout << "Play Again?  Answer Y for yes\n";
 //        cin >> response;
-//        playAgain = toupper(response) == 'Y';
+//       // playAgain = toupper(response) == 'Y';
 //    }
     
     srand((int)time(NULL));
         bool playAgain = true;
         char response;
         aStarSolve g;
-        int Game0[SIZE*SIZE] = { 1, 2, 3, 7, 4, 0, 6, 5, 8 };
+        int Game0[SIZE*SIZE] = { 1, 2, 3, 7, 4, 0, 6, 5, 8  };
         g.playGiven("Game0", Game0);
         cout << "Click any key to continue\n";
         cin >> response;
@@ -147,14 +149,14 @@ int main()
         cout << "Click any key to continue\n";
         cin >> response;;
     
-//        const int JUMBLECT = 4;  // how much jumbling to to in random board
-//        while (playAgain)
-//        {
-//            g.playRandom("Random Board", JUMBLECT);
-//            cout << "Play Again?  Answer Y for yes\n";
-//            cin >> response;
-//            playAgain = toupper(response) == 'Y';
-//        }
+        const int JUMBLECT = 4;  // how much jumbling to to in random board
+        while (playAgain)
+        {
+            g.playRandom("Random Board", JUMBLECT);
+            cout << "Play Again?  Answer Y for yes\n";
+            cin >> response;
+            playAgain = toupper(response) == 'Y';
+        }
     
     return 0;
 }

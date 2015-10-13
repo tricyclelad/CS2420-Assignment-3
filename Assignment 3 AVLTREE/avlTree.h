@@ -45,6 +45,16 @@ template <typename Comparable>
 class AvlTree
 {
 public:
+    int getNodesAdded(){return nodesAdded;}
+    int getNodesRemoved(){return nodesRemoved;}
+    int getTotalNodes(){return totalNodes;}
+    
+    
+private:
+    int nodesRemoved = 0;
+    int nodesAdded = 0;
+    int totalNodes = 0;
+public:
     AvlTree( ) : root{ nullptr }
     { }
     
@@ -150,7 +160,7 @@ public:
     /**
      * Insert x into the tree; duplicates are ignored.
      */
-    void insert( const Comparable & x )
+    void insert( Comparable & x )
     {
         insert( x, root );
     }
@@ -197,14 +207,23 @@ private:
      * t is the node that roots the subtree.
      * Set the new root of the subtree.
      */
-    void insert( const Comparable & x, AvlNode * & t )
+    void insert( Comparable & x, AvlNode * & t )
     {
         if( t == nullptr )
+        {
             t = new AvlNode{ x, nullptr, nullptr };
+            nodesAdded++;
+            totalNodes++;
+        }
         else if( x < t->element )
             insert( x, t->left );
         else if( t->element < x )
             insert( x, t->right );
+        else if(x == t->element)
+            return;
+        else
+            insert(x, t->left);
+        
         
         balance( t );
     }
@@ -223,6 +242,10 @@ private:
             insert( std::move( x ), t->left );
         else if( t->element < x )
             insert( std::move( x ), t->right );
+        else if(x==t->element)
+            return;
+        else
+            insert( std::move(x), t->left);
         
         balance( t );
     }
@@ -252,6 +275,8 @@ private:
             AvlNode *oldNode = t;
             t = ( t->left != nullptr ) ? t->left : t->right;
             delete oldNode;
+            nodesRemoved++;
+            totalNodes--;
         }
         
         balance( t );
@@ -320,7 +345,10 @@ private:
             AvlNode *oldNode = t;
             t = ( t->left != nullptr ) ? t->left : t->right;
             delete oldNode;
+                nodesRemoved++;
+                totalNodes--;
             }
+            
             balance(t);
             
         }

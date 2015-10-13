@@ -16,11 +16,17 @@ class GameState{
 //HINT:   The class you use as Comparable must have overloaded operators for > == and <.
 public:
     GameState(const Board & b, int cost = 0, char history='_');
+    GameState(const GameState &rhs);//copy Constructor
+    
+    void update();
     int getEstimatedCost() const{return estimatedCost;}
     int getCostSoFar() const{return costSoFar;}
     int getPriority() const{return (priority);}
+    int costSoFar = 0;
     char getHistory() const{return history;}
-    bool operator==(GameState &gs);
+    bool operator==( GameState &gs);
+//    bool operator!=(GameState &gs);
+    
     friend bool operator <(const GameState& gs1, const GameState& gs2) {
         return gs1.getPriority() < gs2.getPriority();
     }
@@ -37,14 +43,16 @@ public:
     GameState();
     ~GameState();
     string toString()const;
+    Board board;
 private:
     void setPriority();
     void setEstimatedCost();
-    Board currentBoard;
-    int costSoFar = 0;//Number of moves taken from initial state to current board.
+    
+    ;//Number of moves taken from initial state to current board.
     int estimatedCost = 0; // our estimated cost to reach solution using the Hamming distance method
     int priority = 0; //costSoFar + estimatedcost
     char history = ' ';//string of moves to currentBoard
+    int GameStateNum = 0;
 };
 
 

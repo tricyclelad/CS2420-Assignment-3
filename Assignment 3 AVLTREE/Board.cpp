@@ -34,18 +34,7 @@ bool Board::operator!=(Board &b) {
     return false;
 }
 
-Board& Board::operator= (const Board &rhs)
-{
-    // do the copy
-    for (int i =0; i < SIZE; i++)
-        for (int j = 0; j < SIZE; j++)
-            board[i][j]=rhs.board[i][j];
-    // return the existing object
-    return *this;
-}
-//Create a board by performing legal moves on a board
-//jumbleCt indicates the number of moves that may be required
-//if jumbleCt ==0, return the winning board
+
 void Board::makeBoard(int jumbleCt) {
 	int val=1;
 	for (int i=0; i < SIZE; i++)

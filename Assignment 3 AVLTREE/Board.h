@@ -26,9 +26,6 @@ public:
     
     bool operator!=(Board &b);   //Return true if two boards are equal
     
-    Board& operator= (const Board &rhs);
-    
-    
     int blankRow;   // Row location of blank
 	int blankCol;   // Column location of blank
 	
