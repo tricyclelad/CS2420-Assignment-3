@@ -11,7 +11,6 @@
 		400119FC1BC9C9250042F132 /* Queue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 400119F61BC9C9250042F132 /* Queue.cpp */; settings = {ASSET_TAGS = (); }; };
 		400119FD1BC9C9250042F132 /* SliderProject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 400119F91BC9C9250042F132 /* SliderProject.cpp */; settings = {ASSET_TAGS = (); }; };
 		4055173A1BCC9F59009C5905 /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 405517381BCC9F59009C5905 /* GameState.cpp */; settings = {ASSET_TAGS = (); }; };
-		4055173D1BCCA272009C5905 /* SliderGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4055173B1BCCA272009C5905 /* SliderGame.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,7 +36,6 @@
 		400119F91BC9C9250042F132 /* SliderProject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SliderProject.cpp; sourceTree = "<group>"; };
 		405517381BCC9F59009C5905 /* GameState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
 		405517391BCC9F59009C5905 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
-		4055173B1BCCA272009C5905 /* SliderGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SliderGame.cpp; sourceTree = "<group>"; };
 		4055173C1BCCA272009C5905 /* SliderGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderGame.h; sourceTree = "<group>"; };
 		405517401BCCC851009C5905 /* aStarSolve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aStarSolve.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +74,6 @@
 				400119F21BC9C9250042F132 /* Board.cpp */,
 				400119F31BC9C9250042F132 /* Board.h */,
 				400119F51BC9C9250042F132 /* BruteForceSolve.h */,
-				4055173B1BCCA272009C5905 /* SliderGame.cpp */,
 				4055173C1BCCA272009C5905 /* SliderGame.h */,
 				400119F61BC9C9250042F132 /* Queue.cpp */,
 				400119F71BC9C9250042F132 /* Queue.h */,
@@ -147,7 +144,6 @@
 				400119FA1BC9C9250042F132 /* Board.cpp in Sources */,
 				4055173A1BCC9F59009C5905 /* GameState.cpp in Sources */,
 				400119FD1BC9C9250042F132 /* SliderProject.cpp in Sources */,
-				4055173D1BCCA272009C5905 /* SliderGame.cpp in Sources */,
 				400119FC1BC9C9250042F132 /* Queue.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

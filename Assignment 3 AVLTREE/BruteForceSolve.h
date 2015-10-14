@@ -23,8 +23,14 @@ public:
     Board L;
     Board R;
     Queue Q;
-    BruteForceSolve(){
+    
+    BruteForceSolve()
+    {
         ;
+    }
+    BruteForceSolve(string name, int array[])
+    {
+        this->playGiven(name, array);
     }
     void playGiven(string name, int array[]){
         int boardCount = 0;

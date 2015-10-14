@@ -27,9 +27,12 @@ Queue::Queue()
 
 Queue::~Queue()
 {
+   // Board temp;
+    //cout << "Hello from destructor" << endl;
     while (!isEmpty()) {
-        Pop();
+    Pop();
     }
+
 }
 
 void Queue::Add(Board& pushBoard)
@@ -73,24 +76,8 @@ bool Queue::isEmpty()
 }
 
 void Queue::clear(){
-    if(front == NULL){
-        cout << "nothing to clear..."<< endl;
-        return;
-    }
-    Node *n = front;
-    while(n!=NULL){
-        //		cout << n->value << endl;
-        Node*temp=n;
-        delete(n);
-        n = temp->next;
-    }
-    front = NULL;
-    rear = NULL;
-    delete(n);
-    sizeOfQueue=0;
-    addedToQueue=0;
-    removedFromQueue=0;
     
+    this->~Queue();
     //	cout << "clearing doublyLinkedList..." << endl;
 }
 

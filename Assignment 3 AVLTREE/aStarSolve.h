@@ -30,6 +30,10 @@ public:
     aStarSolve(){
         ;
     }
+    aStarSolve(string name, int array[])
+    {
+        this->playGiven(name, array);
+    }
     void playGiven(string name, int array[]){
         Board insert;
         insert.makeBoard(array);    //Array IS inserted to the board
